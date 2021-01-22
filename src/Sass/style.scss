@@ -15,8 +15,11 @@
 
 
 /*Components*/
-//Navbar
+//Header
 @import 'components/header/headerLayout.scss';
+
+//Filter
+@import 'components/filter/filter.scss';
 
 //Card
 @import 'components/card/cardlayout.scss';
