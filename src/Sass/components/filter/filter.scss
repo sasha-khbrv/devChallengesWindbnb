@@ -7,7 +7,18 @@
 }
 
 //Inner parts
+.filterBtn {
+  width: 100%;
+}
+
 .filterBtn-center {
   border-left: 1px solid $grey-0;
   border-right: 1px solid $grey-0;
+}
+
+@media (max-width: 560px) {
+  .filterContainer {
+    margin-top: 40px;
+    width: 100%;
+  }
 }
