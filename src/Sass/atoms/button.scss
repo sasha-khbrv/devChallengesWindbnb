@@ -1,0 +1,51 @@
+.btn {
+  font-family: 'Mulish', sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.3em;
+  text-align: center;
+  color: $primary;
+
+  border-radius: 16px;  
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0 16px;
+  height: 55px;
+
+  &:focus {
+    outline: none;
+    border: 1px solid $accent;
+  }
+
+  &:hover:not(:focus) {
+    background-color: $grey-0;
+  }
+
+  & .btnShadow {
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  & .btnPlaceholder {
+    color: $grey-1;
+  }
+}
+
+.btnSolid {
+  background-color: $accent;
+  height: 48px;
+  color: $white;
+
+  &:focus {
+    outline: none;
+    border: 1px solid $primary;
+  }
+
+  &:hover:not(:focus) {
+    border: none;
+    background-color: $accent-dark;
+  }
+}
+
+.btnInner {
+  
+}

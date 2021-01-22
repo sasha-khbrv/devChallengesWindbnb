@@ -1,0 +1,22 @@
+@import 'basics/colors.scss';
+@import 'basics/typo.scss';
+@import 'basics/layout.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+/*Atoms*/
+//Button
+@import 'atoms/button.scss';
+@import 'atoms/logo.scss';
+@import 'atoms/links.scss';
+@import 'atoms/tags.scss';
+
+
+/*Components*/
+//Navbar
+@import 'components/header/headerLayout.scss';
+
+//Card
+@import 'components/card/cardlayout.scss';

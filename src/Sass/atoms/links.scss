@@ -1,0 +1,24 @@
+a {
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.2em;
+  color: $grey-2;
+  border-bottom: 1px solid $grey-2;
+  outline: none;
+  transition: all 0.2s ease-out;
+  text-decoration: none;
+
+  &:active {
+    border: none;
+  }
+
+  &:focus {
+    border: none;
+    outline: 1px solid $accent;
+  }
+
+  &:hover:not(:focus) {
+    color: $secondary;
+    border-color: $secondary;
+  }
+}
