@@ -11,7 +11,7 @@
 @import 'atoms/button.scss';
 @import 'atoms/logo.scss';
 @import 'atoms/links.scss';
-@import 'atoms/tags.scss';
+@import 'atoms/badges.scss';
 
 
 /*Components*/
@@ -22,4 +22,7 @@
 @import 'components/filter/filter.scss';
 
 //Card
-@import 'components/card/cardlayout.scss';
+@import 'components/cards/cards.scss';
+
+//Footer
+@import 'components/footer/footer.scss';

@@ -1,0 +1,19 @@
+@import 'card.scss';
+
+.contentContainer {
+  margin-bottom: 85px;
+}
+
+.contentHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 32px;
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 50px 32px;
+}

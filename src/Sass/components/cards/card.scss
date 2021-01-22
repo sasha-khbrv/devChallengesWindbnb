@@ -1,0 +1,47 @@
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cardImg {
+  margin-bottom: 15px;
+  img {
+  width: 100%;
+  border-radius: 24px;  
+  }
+}
+
+.cardDescr {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 12px;
+
+  .badge {
+    margin-right: 10px;
+  }
+
+  .cardRating {
+    margin-left: auto
+  }
+}
+
+.cardTags {
+  color: $grey-3;
+}
+
+.cardRating {
+  color: $secondary;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 7px;
+    background: url(../../../Images/grade-24px.svg) no-repeat center center;
+  }
+}
