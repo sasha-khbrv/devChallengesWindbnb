@@ -4,7 +4,7 @@ function FilterCollapsed({filterState, setFilterState}) {
   return (
     <div className="filterContainer">
       <div className="filterBtn filterBtn-left">
-        <button className="btn" onClick={() => setFilterState(false)}>
+        <button className="btn" onClick={() => setFilterState(!filterState)}>
           Helsinki, Finland
         </button>
       </div>

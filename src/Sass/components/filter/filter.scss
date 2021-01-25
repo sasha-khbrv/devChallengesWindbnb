@@ -40,6 +40,17 @@
 .filterContentContainer {
   background-color: white;
   padding: 93px 0 70px;
+
+  .closeBtn {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    color: $grey-3;
+    cursor: pointer;
+    &:hover {
+      color: $accent;
+    }
+  }
 }
 
 .filterContainer-full {

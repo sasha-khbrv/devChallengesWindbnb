@@ -6,18 +6,16 @@ import FilterExpanded from './Filter/FilterExpanded';
 
 function Header() {
   const [filterState, setFilterState] = useState(true);
-
-  
+   
 
   return (
     <header className="headerContainer">
-     {/*  {filterState && <Logo /> }
+      {filterState && <Logo /> }
       {
         filterState 
           ? <FilterCollapsed filterState={filterState} setFilterState={setFilterState}/> 
           : <FilterExpanded filterState={filterState} setFilterState={setFilterState}/> 
-      } */}
-    <FilterExpanded />
+      } 
     </header>
   );
 }

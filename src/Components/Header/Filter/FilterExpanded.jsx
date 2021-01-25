@@ -1,10 +1,15 @@
 import React from 'react';
+import Guests from './Guests/Guests';
+import CityList from './CityList/CityList';
 function FilterExpanded({filterState, setFilterState}) {
   return (
-    <div className="filterPageContainer">
+    <div className="filterPageContainer"  >
     <div className="filterContentContainer">
+      <span className="material-icons closeBtn" onClick={() => setFilterState(!filterState)}>
+        close
+      </span>
     <div className="container">
-          <div className="filterContainer filterContainer-full">
+          <div className="filterContainer filterContainer-full" >
             <div className="filterItem filterBtn-left">
               <button className="btn btnTitle">
                 <span className="buttonHelperText">Location</span>
@@ -27,32 +32,10 @@ function FilterExpanded({filterState, setFilterState}) {
 
           <div className="filterValue filterContainer-full">
             <div className="filterItem">
-              <ul className="cityList">
-                <li>Helsinki, Finland</li>
-                <li>Turku, Finland</li>
-                <li>Oulu, Finland</li>
-                <li>Vaasa, Finland</li>
-              </ul>
+              <CityList />
             </div>
-            <div className="filterItem guestsContainer">
-              <div className="guestItem">
-                <span className="filterTitleTypo">Adults</span>
-                <span className="filterHintTypo">Ages 13 or above</span>
-                <div>
-                  <button className="btn btnCount">-</button>
-                  <span className="filterTitleTypo"> 0 </span>
-                  <button className="btn btnCount">+</button>
-                </div>
-              </div>
-              <div className="guestItem">
-                <span className="filterTitleTypo">Children</span>
-                <span className="filterHintTypo">Ages 2-12</span>
-                <div>
-                  <button className="btn btnCount">-</button>
-                  <span className="filterTitleTypo"> 0 </span>
-                  <button className="btn btnCount">+</button>
-                </div>
-              </div>
+            <div className="filterItem">
+              <Guests />
             </div>
             <div className="filterItem"></div>
           </div>
