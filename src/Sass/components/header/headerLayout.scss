@@ -5,3 +5,16 @@
   flex-wrap: wrap;
   margin: 32px 0 60px;  
 }
+
+.headerContainer-full{
+  .logo {
+    display: none;
+  }
+  .filterContainer {
+    width: 100%;
+  }
+
+  .btn {
+    text-align: left;
+  }
+}

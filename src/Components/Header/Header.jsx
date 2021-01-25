@@ -1,12 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Logo from './Logo/Logo';
-import Filter from './Filter/Filter';
+import FilterCollapsed from './Filter/FilterCollapsed';
+import FilterExpanded from './Filter/FilterExpanded';
+
 
 function Header() {
+  const [filterState, setFilterState] = useState(true);
+
+  
+
   return (
     <header className="headerContainer">
-      <Logo />
-      <Filter />
+     {/*  {filterState && <Logo /> }
+      {
+        filterState 
+          ? <FilterCollapsed filterState={filterState} setFilterState={setFilterState}/> 
+          : <FilterExpanded filterState={filterState} setFilterState={setFilterState}/> 
+      } */}
+    <FilterExpanded />
     </header>
   );
 }

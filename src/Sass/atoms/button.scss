@@ -1,11 +1,14 @@
-.btn {
+.btnTypoBasic {
   font-family: 'Mulish', sans-serif;
   font-size: 0.875rem;
   line-height: 1.3em;
   text-align: center;
   color: $primary;
-  width: 100%;
+}
 
+.btn {
+  @extend .btnTypoBasic;
+  width: 100%;
   border-radius: 16px;  
   border: none;
   background-color: transparent;
@@ -29,8 +32,12 @@
 
 .btnSolid {
   background-color: $accent;
-  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   color: $white;
+  font-weight: 700;
+  padding: 0 25px;
 
   &:focus {
     outline: none;
@@ -57,4 +64,30 @@
   &:hover {
     color: $accent-dark;
   }
+}
+
+.btnTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.buttonHelperText {
+  font-weight: 800;
+  font-size: 0.5625rem;
+  line-height: 1.2em;
+  text-transform: uppercase;
+  color: $primary;
+  margin-bottom: 4px;
+}
+
+.btnCount {
+  padding: 0;
+  height: 23px;
+  width: 23px;
+  border-radius: 4px;
+  text-align: center;
+  border: 1px solid $grey-3;
+  color: $grey-3;
 }
