@@ -9,7 +9,7 @@ function FilterCollapsed({filterState, setFilterState}) {
         </button>
       </div>
       <div className="filterBtn filterBtn-center">
-        <button className="btn btnPlaceholder">
+        <button className="btn btnPlaceholder" onClick={() => setFilterState(!filterState)}>
           Add guests
         </button>
       </div>
