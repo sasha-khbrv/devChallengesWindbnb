@@ -1,6 +1,52 @@
 [
   {
-    "id": 1
-    
+    "id": 0,
+    "title": "Stylist apartment in center of the city",
+    "tags": "Entire apartment . 2 beds",
+    "location": "Helsinki, Finland",
+    "rating": "4.40",
+    "isSuperHost": true,
+    "photo": "https://images.pexels.com/photos/4050318/pexels-photo-4050318.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    "alt": "Interior description"
+  },
+  {
+    "id": 1,
+    "title": "Cozy, peaceful and private room with",
+    "tags": "Private room",
+    "location": "Turku, Finland",
+    "rating": "4.25",
+    "isSuperHost": false,
+    "photo": "https://images.pexels.com/photos/2062431/pexels-photo-2062431.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    "alt": "Interior description"
+  },
+  {
+    "id": 2,
+    "title": "Mordern House in a remote area",
+    "tags": "Entire house",
+    "location": "Oulu, Finland",
+    "rating": "4.96",
+    "isSuperHost": false,
+    "photo": "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    "alt": "Interior description"
+  },
+  {
+    "id": 3,
+    "title": "Stylist room in design district ",
+    "tags": "Entire apartment . 2 beds",
+    "location": "Vaasa, Finland",
+    "rating": "4.85",
+    "isSuperHost": true,
+    "photo": "https://images.pexels.com/photos/707581/pexels-photo-707581.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    "alt": "Interior description"
+  },
+  {
+    "id": 4,
+    "title": "Modern apartment close to nature",
+    "tags": "Private room",
+    "location": "Helsinki, Finland",
+    "rating": "4.54",
+    "isSuperHost": true,
+    "photo": "https://images.pexels.com/photos/584399/living-room-couch-interior-room-584399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    "alt": "Interior description"
   }
 ]

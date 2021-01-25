@@ -1,18 +1,18 @@
 import React from 'react';
-import photo from '../../../Images/apartmentPhoto/living-room-2569325_1280.jpg'
 
-function Card() {
+function Card({photo, alt, isSuperHost, tags, rating, title}) {
+  console.log(isSuperHost);
   return (
     <div className="cardContainer">
       <div className="cardImg">
-        <img src={photo} alt="Stylist apartment in center of the city"/>
+        <img src={photo} alt={alt}/>
       </div>
       <div className="cardDescr">
-        <span className="badge">Super host</span>
-        <span className="basicText cardTags">Entire apartment . 2 beds</span>
-        <span className="basicText cardRating">4.6</span>
+        {isSuperHost && <span className="badge">Super host</span>}        
+        <span className="basicText cardTags">{tags}</span>
+        <span className="basicText cardRating">{rating}</span>
       </div>
-      <h2>Stylist apartment in center of the city</h2>
+      <h2>{title}</h2>
     </div>
   );
 }

@@ -1,19 +1,23 @@
 import React from 'react';
 import Card from './Card/Card';
 
-function Cards() {
+function Cards({stays}) {
+  const staysAmount = (stays.length === 1) ? `${stays.length} stay` : `${stays.length} stays`
+  const cardArray = stays.map(item => <Card key={item.id} 
+                                            photo={item.photo}
+                                            alt={item.alt} 
+                                            isSuperHost={item.isSuperHost} 
+                                            tags={item.tags} 
+                                            rating={item.rating} 
+                                            title={item.title} />)
   return (
     <main className="contentContainer">
       <div className="contentHeader">
         <h1>Stays in Finland</h1>
-        <span className="asideText">12+ stays</span>
+        <span className="asideText">{staysAmount}</span>
       </div>
       <div className="cardsGrid">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        {cardArray}
       </div>
     </main>
   );
