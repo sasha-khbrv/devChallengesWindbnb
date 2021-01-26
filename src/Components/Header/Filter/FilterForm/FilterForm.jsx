@@ -2,7 +2,7 @@ import React from 'react';
 import { Formik, Form } from 'formik';
 import TextInput from './Inputs/TextInput';
 
-const FilterForm = () => {
+const FilterForm = ({fieldActive, setFieldActive, sumOfGuests, location, setCardsFilter, filterState, setFilterState}) => {
   return (
     <>
       <Formik
@@ -12,29 +12,30 @@ const FilterForm = () => {
         }}
 
         onSubmit={(values, { setSubmitting }) => {
-          //Make the filter work!
-          setTimeout(() => {
-            alert(JSON.stringify(values, null, 2));
-            setSubmitting(false);
-          }, 400);
+          setCardsFilter(location);
+          setFilterState(!filterState);
         }}
       >
         <Form className="filterContainer filterContent">
           <TextInput
+            fieldActive={fieldActive}
+            setFieldActive={setFieldActive}
             label="Location"
             name="location"
             type="text"
             placeholder="Choose location"
             readOnly={true}
-            isactive="true"
+            value={location}             
           />
           <TextInput
+            fieldActive={fieldActive}
+            setFieldActive={setFieldActive}
             label="Guests"
             name="guests"
             type="text"
             placeholder="Add guests"
             readOnly={true}
-            isactive="false"
+            value={ sumOfGuests > 0 ? sumOfGuests : ""}            
           />
           <button type="submit" className="btn btnSolid filterItem">
             <span className="material-icons">search</span>

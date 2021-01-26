@@ -1,13 +1,14 @@
 import React from 'react';
 
-function CityList() {
+function CityList({stays, setLocation}) {
+  //Took all cities from API/stays.json
+  const cityItem = [...new Set(stays.map(item => item.location))]
+    .map((city, index) => <li key={index} onClick={() => setLocation(city)}>{city}</li>)
+  
   return (
     <div className="filterItem">
       <ul className="cityList">
-        <li>Helsinki, Finland</li>
-        <li>Turku, Finland</li>
-        <li>Oulu, Finland</li>
-        <li>Vaasa, Finland</li>
+        {cityItem}
       </ul>
     </div>
   );
