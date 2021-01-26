@@ -1,15 +1,17 @@
 import React from 'react';
 import Guests from './Guests/Guests';
 import CityList from './CityList/CityList';
+import FilterForm from './FilterForm/FilterForm';
+
 function FilterExpanded({filterState, setFilterState}) {
   return (
     <div className="filterPageContainer"  >
-    <div className="filterContentContainer">
+    <div className="filterFormContainer">
       <span className="material-icons closeBtn" onClick={() => setFilterState(!filterState)}>
         close
       </span>
     <div className="container">
-          <div className="filterContainer filterContainer-full" >
+          {/* <div className="filterContainer filterContainer-full" >
             <div className="filterItem filterBtn-left">
               <button className="btn btnTitle">
                 <span className="buttonHelperText">Location</span>
@@ -28,8 +30,8 @@ function FilterExpanded({filterState, setFilterState}) {
                 Search
               </button>
             </div>      
-          </div>
-
+          </div> */}
+          <FilterForm />
           <div className="filterValue filterContainer-full">
             <div className="filterItem">
               <CityList />
