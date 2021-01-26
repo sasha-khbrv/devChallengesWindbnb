@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/devChallengesWindbnb/static/css/main.17f94ec2.chunk.css",
+    "main.js": "/devChallengesWindbnb/static/js/main.570c54b3.chunk.js",
+    "main.js.map": "/devChallengesWindbnb/static/js/main.570c54b3.chunk.js.map",
+    "runtime-main.js": "/devChallengesWindbnb/static/js/runtime-main.e9c51ec3.js",
+    "runtime-main.js.map": "/devChallengesWindbnb/static/js/runtime-main.e9c51ec3.js.map",
+    "static/js/2.ecd547f2.chunk.js": "/devChallengesWindbnb/static/js/2.ecd547f2.chunk.js",
+    "static/js/2.ecd547f2.chunk.js.map": "/devChallengesWindbnb/static/js/2.ecd547f2.chunk.js.map",
+    "static/js/3.9553cd84.chunk.js": "/devChallengesWindbnb/static/js/3.9553cd84.chunk.js",
+    "static/js/3.9553cd84.chunk.js.map": "/devChallengesWindbnb/static/js/3.9553cd84.chunk.js.map",
+    "index.html": "/devChallengesWindbnb/index.html",
+    "static/css/main.17f94ec2.chunk.css.map": "/devChallengesWindbnb/static/css/main.17f94ec2.chunk.css.map",
+    "static/js/2.ecd547f2.chunk.js.LICENSE.txt": "/devChallengesWindbnb/static/js/2.ecd547f2.chunk.js.LICENSE.txt",
+    "static/media/style.scss": "/devChallengesWindbnb/static/media/location_on-24px.e08c7497.svg",
+    "static/media/logoWindbnb.58b1f876.svg": "/devChallengesWindbnb/static/media/logoWindbnb.58b1f876.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e9c51ec3.js",
+    "static/js/2.ecd547f2.chunk.js",
+    "static/css/main.17f94ec2.chunk.css",
+    "static/js/main.570c54b3.chunk.js"
+  ]
+}
