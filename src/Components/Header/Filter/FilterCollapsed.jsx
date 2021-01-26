@@ -1,21 +1,26 @@
 import React from 'react';
 function FilterCollapsed({filterState, setFilterState}) {
-
+  const onClickHandler = () => {
+    
+    setFilterState(!filterState)
+  }
   return (
-    <div className="filterContainer">
-      <div className="filterBtn filterBtn-left">
-        <button className="btn" onClick={() => setFilterState(!filterState)}>
-          Helsinki, Finland
+    <div className="filterContainer filterCollapsed">
+      <div>
+        <button className="btn btnPlaceholder" onClick={onClickHandler}>
+          Choose location
         </button>
       </div>
-      <div className="filterBtn filterBtn-center">
-        <button className="btn btnPlaceholder" onClick={() => setFilterState(!filterState)}>
+      <div>
+        <button className="btn btnPlaceholder" onClick={onClickHandler}>
           Add guests
         </button>
       </div>
-      <div className="filterBtn filterBtn-right">
-        <button className="btn btnIcon"><span className="material-icons">search</span></button>
-      </div>      
+      <div>
+        <button className="btn btnIcon">
+          <span className="material-icons">search</span>
+        </button>  
+      </div>    
     </div>
   );
 }

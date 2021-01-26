@@ -2,15 +2,13 @@ import React from 'react';
 import { useField } from 'formik';
 
 const TextInput = ({ label, ...props }) => {
-  const [field, meta] = useField(props);
+  const classList = props.isactive === "true" ? "textInput textInput-active" : "textInput";
+  const [field] = useField(props);
   return (
-    <>
-      <label htmlFor={props.id || props.name}>{label}</label>
-      <input className="text-input" {...field} {...props} />
-      {meta.touched && meta.error ? (
-        <div className="error">{meta.error}</div>
-      ) : null}
-    </>
+    <div className="filterItem textInputContainer">
+      <label htmlFor={props.id || props.name} className="textInput--label">{label}</label>
+      <input className={classList} {...field} {...props} />
+    </div>
   );
 };
 

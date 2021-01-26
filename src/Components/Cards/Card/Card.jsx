@@ -1,7 +1,6 @@
 import React from 'react';
 
 function Card({photo, alt, isSuperHost, tags, rating, title}) {
-  console.log(isSuperHost);
   return (
     <div className="cardContainer">
       <div className="cardImg">

@@ -1,23 +1,15 @@
 import React from 'react';
 import { Formik, Form } from 'formik';
-import * as Yup from 'yup';
 import TextInput from './Inputs/TextInput';
 
 const FilterForm = () => {
   return (
-    <div className="filterContainer filterContainer-full">
+    <>
       <Formik
         initialValues={{
           location: '',
           guests: ''
         }}
-
-        validationSchema={Yup.object({
-          location: Yup.string()
-            .max(15, 'Must be 15 characters or less'),
-          guests: Yup.number()
-            .max(20, 'Must be a number'),
-        })}
 
         onSubmit={(values, { setSubmitting }) => {
           //Make the filter work!
@@ -27,28 +19,30 @@ const FilterForm = () => {
           }, 400);
         }}
       >
-        <Form>
+        <Form className="filterContainer filterContent">
           <TextInput
             label="Location"
             name="location"
             type="text"
             placeholder="Choose location"
-            value=""
+            readOnly={true}
+            isactive="true"
           />
           <TextInput
             label="Guests"
             name="guests"
             type="text"
             placeholder="Add guests"
-            value=""
+            readOnly={true}
+            isactive="false"
           />
-          <button type="submit" className="btn btnSolid">
+          <button type="submit" className="btn btnSolid filterItem">
             <span className="material-icons">search</span>
             Search
           </button>
         </Form>
       </Formik>
-    </div>
+    </>
   );
 };
 

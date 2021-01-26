@@ -4,7 +4,6 @@
   font-size: 0.875rem;
   line-height: 1.3em;
 }
-
 .filterTitleTypo {
   @extend .filterTypo;
   color: $primary;
@@ -16,18 +15,41 @@
   color: $grey-3;
   font-weight: 400;
 }
+.filterTitle {
+  font-family: 'Mulish', sans-serif;
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1.25em;
+  color: $primary;
+  margin-bottom: 16px;
+  display: none;
+}
 
 ////////////////
 .filterContainer {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   height: 55px;
   border-radius: 16px;
   background-color: $white;
   box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
 }
 
+//Collapsed filter
+.filterCollapsed {
+  div {
+    width: 100%;
+    border-right: 1px solid $grey-0;
+  }
+  div:last-child {
+    width: auto;
+    border: none;
+  }
+}
+
 //Expand filter
-.filterPageContainer {
+.pageContainer--filter { //for darkening the page
   position: fixed;
   top: 0;
   left: 0;
@@ -37,33 +59,15 @@
   width: 100%;
 }
 
-.filterFormContainer {
+.contentContainer--filter { //container for all the content
   background-color: white;
   padding: 93px 0 70px;
-
-  .closeBtn {
-    position: absolute;
-    top: 24px;
-    right: 24px;
-    color: $grey-3;
-    cursor: pointer;
-    &:hover {
-      color: $accent;
-    }
-  }
 }
 
-.filterContainer-full {
+.filterContent { //Grid for both parts
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-    .filterItem {
-      flex: 1;
-    }
-    .btnSolid {
-      width: auto;
-      margin: 0 auto;
-    }
+  display: grid;
+  grid-template-columns: 1fr 1fr 128px;
 }
 
 .filterValue {
@@ -71,28 +75,24 @@
 }
 
 //Inner parts
-.filterBtn-center {
-  border-left: 1px solid $grey-0;
-  border-right: 1px solid $grey-0;
-}
-
-.cityList {
+.cityList { //ul
   margin: 0;
   padding: 0;
   list-style: none;
+
   li {
-    margin: 0 16px 34px;    
-    display: flex;
-    align-items: center;
+    padding-left: 53px;
+    margin-bottom: 34px;    
     cursor: pointer;
+    position: relative;
     &:last-child {
       margin-bottom: 0;
     }
     &:before {
       content: "";
       display: inline-block;
-      position: relative;
-      left: -3px;
+      position: absolute;
+      left: 23px;
       height: 20px;
       width: 14px;
       background: url(../../../Images/location_on-24px.svg) no-repeat left center;
@@ -108,7 +108,7 @@
 .guestsContainer {
   display: flex;
   flex-direction: column;
-  margin-left: 23px;
+  padding-left: 25px;
 }
 
 .guestItem {
@@ -131,9 +131,41 @@
   }
 }
 
+///Media queries
 @media (max-width: 560px) {
   .filterContainer {
     margin-top: 40px;
     width: 100%;
   }
+
+  .contentContainer--filter {
+    height: 100vh;
+    padding-top: 18px;
+  }
+
+  .filterTitle {
+    display: block;
+  }
+
+  .filterContainer.filterContent {
+    margin-top: 0;
+    grid-template-columns: 1fr 1fr;
+
+    button {
+      position: absolute;
+      width: 128px;  
+      bottom: 18px;
+      left: 50%;
+      transform: translateX(-50%);          
+    }
+  }
+  .filterContent.filterValue {
+    grid-template-columns: 1fr;
+  }
+
+  .filterValue {
+    margin-top: 35px;
+  }
+
+//ending  
 }

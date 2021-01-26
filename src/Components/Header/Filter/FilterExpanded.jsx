@@ -1,47 +1,19 @@
 import React from 'react';
-import Guests from './Guests/Guests';
-import CityList from './CityList/CityList';
 import FilterForm from './FilterForm/FilterForm';
+import FilterValues from './FilterValues/FilterValues';
 
 function FilterExpanded({filterState, setFilterState}) {
   return (
-    <div className="filterPageContainer"  >
-    <div className="filterFormContainer">
+    <div className="pageContainer--filter"> {/* for darkening */}
+    <div className="contentContainer--filter">   {/* content */}   
       <span className="material-icons closeBtn" onClick={() => setFilterState(!filterState)}>
         close
       </span>
-    <div className="container">
-          {/* <div className="filterContainer filterContainer-full" >
-            <div className="filterItem filterBtn-left">
-              <button className="btn btnTitle">
-                <span className="buttonHelperText">Location</span>
-                Helsinki, Finland
-              </button>
-            </div>
-            <div className="filterItem filterBtn-center">
-              <button className="btn btnPlaceholder btnTitle">
-                <span className="buttonHelperText">Guests</span>
-                Add guests
-              </button>
-            </div>
-            <div className="filterItem filterBtn-right">
-              <button className="btn btnSolid">
-                <span className="material-icons">search</span>
-                Search
-              </button>
-            </div>      
-          </div> */}
-          <FilterForm />
-          <div className="filterValue filterContainer-full">
-            <div className="filterItem">
-              <CityList />
-            </div>
-            <div className="filterItem">
-              <Guests />
-            </div>
-            <div className="filterItem"></div>
-          </div>
-    </div>
+      <div className="container">
+        <p className="filterTitle">Edit your search</p>
+        <FilterForm />
+        <FilterValues />         
+      </div>
     </div>
     </div>
   );
