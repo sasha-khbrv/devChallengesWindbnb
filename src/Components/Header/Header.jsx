@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Logo from './Logo/Logo';
 import FilterCollapsed from './Filter/FilterCollapsed';
 import FilterExpanded from './Filter/FilterExpanded';
 
 
-function Header() {
-  const [filterState, setFilterState] = useState(false);
+function Header({filterState, setFilterState}) {
+  
    
 
   return (

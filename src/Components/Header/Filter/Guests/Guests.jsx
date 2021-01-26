@@ -2,7 +2,7 @@ import React from 'react';
 
 function Guests() {
   return (
-    <div className="gestsContainer">
+    <div className="guestsContainer">
       <div className="guestItem">
         <span className="filterTitleTypo">Adults</span>
         <span className="filterHintTypo">Ages 13 or above</span>
